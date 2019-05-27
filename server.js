@@ -16,7 +16,9 @@ app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
-mongoose.connect('mongodb://localhost:27017/hodierno', { useNewUrlParser: true });
+const uri = "mongodb+srv://lucasbking:44223820lu4422l@hodierno-dwjls.mongodb.net/test?retryWrites=true";
+
+mongoose.connect(uri, { useNewUrlParser: true });
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 const connection = mongoose.connection;
